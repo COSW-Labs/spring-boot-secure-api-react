@@ -51,8 +51,8 @@ public class UserController
             throw new ServletException( "Invalid login. Please check your name and password." );
         }
 
-//        jwtToken = Jwts.builder().setSubject( username ).claim( "roles", "user" ).setIssuedAt( new Date() ).signWith(
-//            SignatureAlgorithm.HS256, "secretkey" ).compact();
+	        jwtToken = Jwts.builder().setSubject( username ).claim( "roles", "user" ).setIssuedAt( new Date() ).signWith(
+            SignatureAlgorithm.HS256, "secretkey" ).compact();
 
         return new Token( jwtToken );
     }
