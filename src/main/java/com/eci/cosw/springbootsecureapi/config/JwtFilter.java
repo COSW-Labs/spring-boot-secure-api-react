@@ -17,7 +17,10 @@ import java.io.IOException;
 public class JwtFilter
     extends GenericFilterBean
 {
-
+	/*
+	* El metodo adiciona un filtro en el caso en el que la solicityud es la esperada pero arroja error
+	* si la estructura es incorrecta o el tocken dentro de la etsructura lo es.
+	*/
     public void doFilter( final ServletRequest servletRequest, final ServletResponse servletResponse,
                           final FilterChain filterChain )
         throws IOException, ServletException
